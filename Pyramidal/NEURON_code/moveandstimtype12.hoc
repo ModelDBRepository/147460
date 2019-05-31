@@ -1,0 +1,48 @@
+objref f1	
+f1 = new File()		
+
+objref data, stimdata, m, apc, data2
+data=new Vector()
+data2=new Vector(3)
+
+m = new Matrix(3000, 3)
+
+apc = new APCount(0.5)
+apc.thresh=0
+
+printf("---Starting Simulations---")
+
+f1 = new File()
+
+j=0
+
+for (x2=-703.003; x2<=1403.003; x2=x2+25){
+	for (y=-553.003; y<=1003.003; y=y+25){
+		for (i=-0.005; i>=-.125; i=i-0.01){
+			
+			data.record(&soma.v(0.5))
+
+			setelec(x2, y, 0)
+			setstim(1, 1, i)
+			tstop=25
+
+			init()
+			run()
+			
+			if(apc.n >= 1){
+				print "X:",x2, "\tY:",y, "\tI:",i, "\tAP:",apc.n
+				data2.x[0]=x2
+				data2.x[1]=y
+				data2.x[2]=i
+				m.setrow(j, data2) 
+				j=j+1			
+				break
+			}
+		}
+	}
+	print "Type 12"
+	f1.wopen("filemat12.dat")
+	m.fprint(f1)
+	f1.close()	
+}
+	

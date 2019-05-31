@@ -1,0 +1,50 @@
+objref f1	
+f1 = new File()		
+
+objref data, stimdata, m, apc, data2
+data=new Vector()
+data2=new Vector(5)
+
+m = new Matrix(3000, 5)
+
+apc = new APCount(0.5)
+apc.thresh=0
+
+printf("---Starting Simulations---")
+
+j=0
+x2=525.003
+y=-575.003
+for (d=0.01; d<=5.00; d=d+0.03){ //150
+	for (i=-0.001; i>=-0.125; i=i-0.001){
+
+		data.record(&soma.v(0.5))
+
+		setelec(x2, y, 0)
+		setstim(1, d, i)
+		tstop=25
+
+		init()
+		run()
+			
+		if(apc.n >= 1){
+			print "X:",x2, "\tY:",y, "\tI:",i, "\tAP:",apc.n, "\tFREQ:", d
+			data2.x[0]=x2
+			data2.x[1]=y
+			data2.x[2]=i
+			data2.x[3]=apc.n
+			data2.x[4]=d
+			m.setrow(j, data2) 
+			j=j+1
+			break
+		}
+	}
+	f1.wopen("strdurC.dat")
+	m.fprint(f1)
+	f1.close()		
+}
+
+
+
+
+

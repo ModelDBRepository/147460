@@ -1,0 +1,830 @@
+/*
+CK Overstreet and JD Klein
+Last Updated 12/20/2012
+Major characteristics of cell bodies and axons reconstructed by hand from:
+H.D. Schwark, “The distribution of intrinsic cortical axons in area 3b of cat primary somatosensory cortex”, Experimental Brain Research, vol. 78, no. 3, pp. 501-513, Aug. 1989. 
+*/
+
+load_file("nrngui.hoc")
+
+NAPICAL=98
+NBOUTON=52
+
+create soma, ap[NAPICAL], bt[NBOUTON]
+
+access soma
+
+connect ap[0](0), soma(0)
+connect ap[1](0), ap[0](1)
+connect ap[2](0), ap[0](1)
+connect ap[3](0), ap[2](1)
+connect ap[4](0), ap[3](1)
+connect ap[5](0), ap[4](1)
+connect ap[6](0), ap[2](1)
+connect ap[7](0), ap[6](1)
+connect ap[8](0), ap[7](1)
+connect ap[9](0), ap[7](1)
+connect ap[10](0), ap[7](1)
+connect ap[11](0), ap[10](1)
+connect ap[12](0), ap[10](1)
+connect ap[13](0), ap[10](1)
+connect ap[14](0), ap[13](1)
+connect ap[15](0), ap[13](1)
+connect ap[16](0), ap[6](1)
+connect ap[17](0), ap[16](1)
+connect ap[18](0), ap[17](1)
+connect ap[19](0), ap[18](1)
+connect ap[20](0), ap[18](1)
+connect ap[21](0), ap[17](1)
+connect ap[22](0), ap[21](1)
+connect ap[23](0), ap[21](1)
+connect ap[24](0), ap[17](1)
+connect ap[25](0), ap[24](1)
+connect ap[26](0), ap[25](1)
+connect ap[27](0), ap[24](1)
+connect ap[28](0), ap[27](1)
+connect ap[29](0), ap[28](1)
+connect ap[30](0), ap[28](1)
+connect ap[31](0), ap[27](1)
+connect ap[32](0), ap[31](1)
+connect ap[33](0), ap[31](1)
+connect ap[34](0), ap[31](1)
+connect ap[35](0), ap[16](1)
+connect ap[36](0), ap[35](1)
+connect ap[37](0), ap[36](1)
+connect ap[38](0), ap[36](1)
+connect ap[39](0), ap[38](1)
+connect ap[40](0), ap[39](1)
+connect ap[41](0), ap[39](1)
+connect ap[42](0), ap[38](1)
+connect ap[43](0), ap[42](1)
+connect ap[44](0), ap[43](1)
+connect ap[45](0), ap[42](1)
+connect ap[46](0), ap[45](1)
+connect ap[47](0), ap[46](1)
+connect ap[48](0), ap[46](1)
+connect ap[49](0), ap[46](1)
+connect ap[50](0), ap[46](1)
+connect ap[51](0), ap[45](1)
+connect ap[52](0), ap[51](1)
+connect ap[53](0), ap[51](1)
+connect ap[54](0), ap[53](1)
+connect ap[55](0), ap[53](1)
+connect ap[56](0), ap[55](1)
+connect ap[57](0), ap[35](1)
+connect ap[58](0), ap[57](1)
+connect ap[59](0), ap[57](1)
+connect ap[60](0), ap[57](1)
+connect ap[61](0), ap[60](1)
+connect ap[62](0), ap[61](1)
+connect ap[63](0), ap[61](1)
+connect ap[64](0), ap[60](1)
+connect ap[65](0), ap[64](1)
+connect ap[66](0), ap[64](1)
+connect ap[67](0), ap[64](1)
+connect ap[68](0), ap[67](1)
+connect ap[69](0), ap[68](1)
+connect ap[70](0), ap[69](1)
+connect ap[71](0), ap[70](1)
+connect ap[72](0), ap[71](1)
+connect ap[73](0), ap[71](1)
+connect ap[74](0), ap[71](1)
+connect ap[75](0), ap[74](1)
+connect ap[76](0), ap[74](1)
+connect ap[77](0), ap[70](1)
+connect ap[78](0), ap[77](1)
+connect ap[79](0), ap[77](1)
+connect ap[80](0), ap[79](1)
+connect ap[81](0), ap[79](1)
+connect ap[82](0), ap[79](1)
+connect ap[83](0), ap[82](1)
+connect ap[84](0), ap[82](1)
+connect ap[85](0), ap[69](1)
+connect ap[86](0), ap[85](1)
+connect ap[87](0), ap[85](1)
+connect ap[88](0), ap[87](1)
+connect ap[89](0), ap[88](1)
+connect ap[90](0), ap[89](1)
+connect ap[91](0), ap[89](1)
+connect ap[92](0), ap[89](1)
+connect ap[93](0), ap[87](1)
+connect ap[94](0), ap[93](1)
+connect ap[95](0), ap[93](1)
+connect ap[96](0), ap[95](1)
+connect ap[97](0), ap[95](1)
+
+connect bt[0](0), ap[1](1)
+connect bt[1](0), ap[4](1)
+connect bt[2](0), ap[5](1)
+connect bt[3](0), ap[8](1)
+connect bt[4](0), ap[9](1)
+connect bt[5](0), ap[11](1)
+connect bt[6](0), ap[12](1)
+connect bt[7](0), ap[14](1)
+connect bt[8](0), ap[15](1)
+connect bt[9](0), ap[19](1)
+connect bt[10](0), ap[20](1)
+connect bt[11](0), ap[22](1)
+connect bt[12](0), ap[23](1)
+connect bt[13](0), ap[26](1)
+connect bt[14](0), ap[29](1)
+connect bt[15](0), ap[30](1)
+connect bt[16](0), ap[32](1)
+connect bt[17](0), ap[33](1)
+connect bt[18](0), ap[34](1)
+connect bt[19](0), ap[37](1)
+connect bt[20](0), ap[40](1)
+connect bt[21](0), ap[41](1)
+connect bt[22](0), ap[44](1)
+connect bt[23](0), ap[47](1)
+connect bt[24](0), ap[48](1)
+connect bt[25](0), ap[49](1)
+connect bt[26](0), ap[50](1)
+connect bt[27](0), ap[52](1)
+connect bt[28](0), ap[54](1)
+connect bt[29](0), ap[56](1)
+connect bt[30](0), ap[58](1)
+connect bt[31](0), ap[59](1)
+connect bt[32](0), ap[62](1)
+connect bt[33](0), ap[63](1)
+connect bt[34](0), ap[65](1)
+connect bt[35](0), ap[66](1)
+connect bt[36](0), ap[72](1)
+connect bt[37](0), ap[73](1)
+connect bt[38](0), ap[75](1)
+connect bt[39](0), ap[76](1)
+connect bt[40](0), ap[78](1)
+connect bt[41](0), ap[80](1)
+connect bt[42](0), ap[81](1)
+connect bt[43](0), ap[83](1)
+connect bt[44](0), ap[84](1)
+connect bt[45](0), ap[86](1)
+connect bt[46](0), ap[90](1)
+connect bt[47](0), ap[91](1)
+connect bt[48](0), ap[92](1)
+connect bt[49](0), ap[94](1)
+connect bt[50](0), ap[96](1)
+connect bt[51](0), ap[97](1)
+
+forall pt3dclear()
+
+soma {
+	pt3dadd(0, 0, 0, 10)
+	pt3dadd(0, 10, 0, 10)
+	insert axnode
+	insert extracellular
+	insert xtra
+	xraxial=1e+09 
+	xg=1e+09 
+	xc=0 
+	e_extracellular=0
+}
+
+for i = 0, NAPICAL-1 ap[i] { 
+	insert axnode 
+	insert extracellular 
+	insert xtra
+	xraxial=1e+09 
+	xg=1e+09 
+	xc=0 
+	e_extracellular=0
+} 
+
+for i = 0, NBOUTON-1 bt[i] { 
+	insert axnode
+	insert extracellular 
+	insert xtra
+	xraxial=1e+09 
+	xg=1e+09 
+	xc=0 
+	e_extracellular=0
+}
+
+ap[0] {
+	pt3dadd(0, 10, 0, 2)
+	pt3dadd(0, -75, 0, 2)
+}
+ap[1] {
+	pt3dadd(0, -150, 0, .5)
+	pt3dadd(175, -75, 0, .25)
+}
+ap[2] {
+	pt3dadd(0, -75, 0, 2)
+	pt3dadd(0, -150, 0, 2)
+}
+ap[3] {
+	pt3dadd(0, -150, 0, .5)
+	pt3dadd(-25, -150, 0, .5)
+}
+ap[4] {
+	pt3dadd(-25, -150, 0, .25)
+	pt3dadd(-100, -25, 0, .25)
+}
+ap[5] {
+	pt3dadd(-25, -150, 0, .25)
+	pt3dadd(-150, -150, 0, .25)
+}
+ap[6] {
+	pt3dadd(0, -150, 0, 2)
+	pt3dadd(0, -200, 0, 2)
+}
+ap[7] {
+	pt3dadd(0, -200, 0, 1)
+	pt3dadd(75, -200, 0, .5)
+}
+ap[8] {
+	pt3dadd(75, -200, 0, .25)
+	pt3dadd(200, -200, 0, .25)
+}
+ap[9] {
+	pt3dadd(75, -200, 0, .25)
+	pt3dadd(125, -300, 0, .25)
+}
+ap[10] {
+	pt3dadd(75, -200, 0, .5)
+	pt3dadd(150, -200, 0, .5)
+}
+ap[11] {
+	pt3dadd(150, -200, 0, .25)
+	pt3dadd(200, -150, 0, .25)
+}
+ap[12] {
+	pt3dadd(150, -200, 0, .5)
+	pt3dadd(275, -300, 0, .25)
+}
+ap[13] {
+	pt3dadd(150, -200, 0, .5)
+	pt3dadd(1050, -200, 0, .5)
+}
+ap[14] {
+	pt3dadd(1050, -200, 0, .25)
+	pt3dadd(1100, -175, 0, .25)
+}
+ap[15] {
+	pt3dadd(1050, -200, 0, .25)
+	pt3dadd(1075, -250, 0, .25)
+}
+ap[16] {
+	pt3dadd(0, -200, 0, 2)
+	pt3dadd(0, -250, 0, 2)
+}
+ap[17] {
+	pt3dadd(0, -250, 0, 2)
+	pt3dadd(0, -300, 0, 1.5)
+}
+ap[18] {
+	pt3dadd(0, -300, 0, .5)
+	pt3dadd(50, -300, 0, .5)
+}
+ap[19] {
+	pt3dadd(50, -300, 0, .25)
+	pt3dadd(50, -250, 0, .25)
+}
+ap[20] {
+	pt3dadd(50, -300, 0, .5)
+	pt3dadd(250, -300, 0, .25)
+}
+ap[21] {
+	pt3dadd(0, -300, 0, .5)
+	pt3dadd(-75, -375, 0, .5)
+}
+ap[22] {
+	pt3dadd(-75, -375, 0, .25)
+	pt3dadd(-275, -375, 0, .25)
+}
+ap[23] {
+	pt3dadd(-75, -375, 0, .25)
+	pt3dadd(-200, -475, 0, .25)
+}
+ap[24] {
+	pt3dadd(0, -300, 0, 1.5)
+	pt3dadd(0, -325, 0, 1.5)
+}
+ap[25] {
+	pt3dadd(0, -325, 0, .5)
+	pt3dadd(200, -525, 0, .5)
+}
+ap[26] {
+	pt3dadd(200, -525, 0, .25)
+	pt3dadd(125, -800, 0, .25)
+}
+ap[27] {
+	pt3dadd(0, -325, 0, 1.5)
+	pt3dadd(-50, -400, 0, 1)
+}
+ap[28] {
+	pt3dadd(-50, -400, 0, .5)
+	pt3dadd(-100, -425, 0, .5)
+}
+ap[29] {
+	pt3dadd(-100, -425, 0, .25)
+	pt3dadd(-200, -425, 0, .25)
+}
+ap[30] {
+	pt3dadd(-100, -425, 0, .25)
+	pt3dadd(-150, -450, 0, .25)
+}
+ap[31] {
+	pt3dadd(-50, -400, 0, .5)
+	pt3dadd(-75, -600, 0, .5)
+}
+ap[32] {
+	pt3dadd(-75, -600, 0, .25)
+	pt3dadd(-150, -600, 0, .25)
+}
+ap[33] {
+	pt3dadd(-75, -600, 0, .25)
+	pt3dadd(-175, -650, 0, .25)
+}
+ap[34] {
+	pt3dadd(-75, -600, 0, .5)
+	pt3dadd(-150, -850, 0, .5)
+}
+ap[35] {
+	pt3dadd(0, -250, 0, 2)
+	pt3dadd(-100, -275, 0, 2.5)
+}
+ap[36] {
+	pt3dadd(-100, -275, 0, 2.5)
+	pt3dadd(-375, -225, 0, 1.5)
+}
+ap[37] {
+	pt3dadd(-375, -225, 0, 0.5)
+	pt3dadd(-400, -100, 0, 0.25)
+}
+ap[38] {
+	pt3dadd(-375, -225, 0, 1.5)
+	pt3dadd(-600, -200, 0, 1)
+}
+ap[39] {
+	pt3dadd(-600, -200, 0, 0.5)
+	pt3dadd(-900, -75, 0, 0.5)
+}
+ap[40] {
+	pt3dadd(-900, -75, 0, .25)
+	pt3dadd(-825, -50, 0, .25)
+}
+ap[41] {
+	pt3dadd(-900, -75, 0, .25)
+	pt3dadd(-1000, -25, 0, .25)
+}
+ap[42] {
+	pt3dadd(-600, -200, 0, .5)
+	pt3dadd(-675, -200, 0, .5)
+}
+ap[43] {
+	pt3dadd(-675, -200, 0, .25)
+	pt3dadd(-700, -275, 0, .25)
+}
+ap[44] {
+	pt3dadd(-700, -275, 0, .25)
+	pt3dadd(-750, -225, 0, .25)
+}
+ap[45] {
+	pt3dadd(-675, -200, 0, .5)
+	pt3dadd(-700, -175, 0, .5)
+}
+ap[46] {
+	pt3dadd(-700, -175, 0, .5)
+	pt3dadd(-700, 0, 0, .5)
+}
+ap[47] {
+	pt3dadd(-700, 0, 0, .25)
+	pt3dadd(-800, 50, 0, .25)
+}
+ap[48] {
+	pt3dadd(-700, 0, 0, .25)
+	pt3dadd(-750, 50, 0, .25)
+}
+ap[49] {
+	pt3dadd(-700, 0, 0, .25)
+	pt3dadd(-650, 25, 0, .25)
+}
+ap[50] {
+	pt3dadd(-700, 0, 0, .25)
+	pt3dadd(-450, 75, 0, .25)
+}
+ap[51] {
+	pt3dadd(-700, -175, 0, .5)
+	pt3dadd(-875, -200, 0, .5)
+}
+ap[52] {
+	pt3dadd(-875, -200, 0, .25)
+	pt3dadd(-1000, -225, 0, .25)
+}
+ap[53] {
+	pt3dadd(-875, -200, 0, .5)
+	pt3dadd(-875, -125, 0, .5)
+}
+ap[54] {
+	pt3dadd(-875, -125, 0, .5)
+	pt3dadd(-925, -100, 0, .5)
+}
+ap[55] {
+	pt3dadd(-875, -125, 0, .25)
+	pt3dadd(-925, -125, 0, .25)
+}
+ap[56] {
+	pt3dadd(-925, -125, 0, .25)
+	pt3dadd(-1000, -75, 0, .25)
+}
+ap[57] {
+	pt3dadd(-100, -275, 0, 2.5)
+	pt3dadd(-200, -325, 0, 2)
+}
+ap[58] {
+	pt3dadd(-200, -325, 0, 0.5)
+	pt3dadd(-250, -300, 0, 0.25)
+}
+ap[59] {
+	pt3dadd(-200, -325, 0, 0.5)
+	pt3dadd(-400, -250, 0, 0.25)
+}
+ap[60] {
+	pt3dadd(-200, -325, 0, 2)
+	pt3dadd(-300, -350, 0, 1.5)
+}
+ap[61] {
+	pt3dadd(-300, -350, 0, 0.5)
+	pt3dadd(-550, -300, 0, .5)
+}
+ap[62] {
+	pt3dadd(-550, -300, 0, .25)
+	pt3dadd(-575, -250, 0, .25)
+}
+ap[63] {
+	pt3dadd(-550, -300, 0, .25)
+	pt3dadd(-750, -275, 0, .25)
+}
+ap[64] {
+	pt3dadd(-300, -350, 0, 1.5)
+	pt3dadd(-375, -650, 0, 1.5)
+}
+ap[65] {
+	pt3dadd(-375, -650, 0, .25)
+	pt3dadd(-450, -300, 0, .25)
+}
+ap[66] {
+	pt3dadd(-375, -650, 0, .25)
+	pt3dadd(-500, -325, 0, .25)
+}
+ap[67] {
+	pt3dadd(-375, -650, 0, .5)
+	pt3dadd(-725, -600, 0, .25)
+}
+ap[68] {
+	pt3dadd(-725, -600, 0, 1.5)
+	pt3dadd(-750, -600, 0, 1.5)
+}
+ap[69] {
+	pt3dadd(-750, -600, 0, 1.5)
+	pt3dadd(-1150, -575, 0, 1)
+}
+ap[70] {
+	pt3dadd(-1150, -575, 0, .5)
+	pt3dadd(-1200, -350, 0, .5)
+}
+ap[71] {
+	pt3dadd(-1200, -350, 0, .5)
+	pt3dadd(-1100, -300, 0, .5)
+}
+ap[72] {
+	pt3dadd(-1100, -300, 0, .25)
+	pt3dadd(-1200, -300, 0, .25)
+}
+ap[73] {
+	pt3dadd(-1100, -300, 0, .25)
+	pt3dadd(-950, -200, 0, .25)
+}
+ap[74] {
+	pt3dadd(-1100, -300, 0, .5)
+	pt3dadd(-1050, -75, 0, .5)
+}
+ap[75] {
+	pt3dadd(-1050, -75, 0, .25)
+	pt3dadd(-1150, -25, 0, .25)
+}
+ap[76] {
+	pt3dadd(-1050, -75, 0, .5)
+	pt3dadd(-1000, 50, 0, .25)
+}
+ap[77] {
+	pt3dadd(-1200, -350, 0, .5)
+	pt3dadd(-1250, -350, 0, .5)
+}
+ap[78] {
+	pt3dadd(-1250, -350, 0, .25)
+	pt3dadd(-1300, -325, 0, .25)
+}
+ap[79] {
+	pt3dadd(-1250, -350, 0, .5)
+	pt3dadd(-1200, -150, 0, .5)
+}
+ap[80] {
+	pt3dadd(-1200, -150, 0, .25)
+	pt3dadd(-475, -150, 0, .25)
+}
+ap[81] {
+	pt3dadd(-1200, -150, 0, .5)
+	pt3dadd(-1200, 150, 0, .25)
+}
+ap[82] {
+	pt3dadd(-1200, -150, 0, .5)
+	pt3dadd(-1300, 0, 0, .5)
+}
+ap[83] {
+	pt3dadd(-1300, 0, 0, .25)
+	pt3dadd(-1350, 50, 0, .25)
+}
+ap[84] {
+	pt3dadd(-1300, 0, 0, .25)
+	pt3dadd(-1300, 150, 0, .25)
+}
+ap[85] {
+	pt3dadd(-1150, -575, 0, 1)
+	pt3dadd(-1350, -550, 0, 1)
+}
+ap[86] {
+	pt3dadd(-1350, -550, 0, .25)
+	pt3dadd(-1375, -100, 0, .25)
+}
+ap[87] {
+	pt3dadd(-1350, -550, 0, .5)
+	pt3dadd(-1850, -400, 0, .5)
+}
+ap[88] {
+	pt3dadd(-1850, -400, 0, .5)
+	pt3dadd(-2000, -150, 0, .5)
+}
+ap[89] {
+	pt3dadd(-2000, -150, 0, .5)
+	pt3dadd(-2150, -100, 0, .5)
+}
+ap[90] {
+	pt3dadd(-2150, -100, 0, .25)
+	pt3dadd(-2150, -50, 0, .25)
+}
+ap[91] {
+	pt3dadd(-2150, -100, 0, .25)
+	pt3dadd(-2350, -50, 0, .25)
+}
+ap[92] {
+	pt3dadd(-2150, -100, 0, .5)
+	pt3dadd(-2450, -100, 0, .25)
+}
+ap[93] {
+	pt3dadd(-1850, -400, 0, .5)
+	pt3dadd(-2250, -225, 0, .5)
+}
+ap[94] {
+	pt3dadd(-2250, -225, 0, .25)
+	pt3dadd(-2500, -225, 0, .25)
+}
+ap[95] {
+	pt3dadd(-2250, -225, 0, .5)
+	pt3dadd(-2400, -175, 0, .5)
+}
+ap[96] {
+	pt3dadd(-2400, -175, 0, .25)
+	pt3dadd(-2550, -150, 0, .25)
+}
+ap[97] {
+	pt3dadd(-2400, -175, 0, .25)
+	pt3dadd(-2550, -100, 0, .25)
+}
+
+bt[0] {
+	pt3dadd(175, -75, 0, 0.25)
+	pt3dadd(179.6, -73.0, 0, 3)
+}
+bt[1] {
+	pt3dadd(-100, -25, 0, 0.25)
+	pt3dadd(-102.6, -20.7, 0, 3)
+}
+bt[2] {
+	pt3dadd(-150, -150, 0, 0.25)
+	pt3dadd(-155.0, -150.0, 0, 3)
+}
+bt[3] {
+	pt3dadd(200, -200, 0, 0.25)
+	pt3dadd(205.0, -200.0, 0, 3)
+}
+bt[4] {
+	pt3dadd(125, -300, 0, 0.25)
+	pt3dadd(127.2, -304.5, 0, 3)
+}
+bt[5] {
+	pt3dadd(200, -150, 0, 0.25)
+	pt3dadd(203.5, -146.5, 0, 3)
+}
+bt[6] {
+	pt3dadd(275, -300, 0, 0.25)
+	pt3dadd(278.9, -303.1, 0, 3)
+}
+bt[7] {
+	pt3dadd(1100, -175, 0, 0.25)
+	pt3dadd(1104.5, -172.8, 0, 3)
+}
+bt[8] {
+	pt3dadd(1075, -250, 0, 0.25)
+	pt3dadd(1077.2, -254.5, 0, 3)
+}
+bt[9] {
+	pt3dadd(50, -250, 0, 0.25)
+	pt3dadd(50.0, -245.0, 0, 3)
+}
+bt[10] {
+	pt3dadd(250, -300, 0, 0.25)
+	pt3dadd(255.0, -300.0, 0, 3)
+}
+bt[11] {
+	pt3dadd(-275, -375, 0, 0.25)
+	pt3dadd(-280.0, -375.0, 0, 3)
+}
+bt[12] {
+	pt3dadd(-200, -475, 0, 0.25)
+	pt3dadd(-203.9, -478.1, 0, 3)
+}
+bt[13] {
+	pt3dadd(125, -800, 0, 0.25)
+	pt3dadd(123.7, -804.8, 0, 3)
+}
+bt[14] {
+	pt3dadd(-200, -425, 0, 0.25)
+	pt3dadd(-205.0, -425.0, 0, 3)
+}
+bt[15] {
+	pt3dadd(-150, -450, 0, 0.25)
+	pt3dadd(-154.5, -452.2, 0, 3)
+}
+bt[16] {
+	pt3dadd(-150, -600, 0, 0.25)
+	pt3dadd(-155.0, -600.0, 0, 3)
+}
+bt[17] {
+	pt3dadd(-175, -650, 0, 0.25)
+	pt3dadd(-179.5, -652.2, 0, 3)
+}
+bt[18] {
+	pt3dadd(-150, -850, 0, 0.25)
+	pt3dadd(-151.4, -854.8, 0, 3)
+}
+bt[19] {
+	pt3dadd(-400, -100, 0, 0.25)
+	pt3dadd(-401.0, -95.1, 0, 3)
+}
+bt[20] {
+	pt3dadd(-825, -50, 0, 0.25)
+	pt3dadd(-820.3, -48.4, 0, 3)
+}
+bt[21] {
+	pt3dadd(-1000, -25, 0, 0.25)
+	pt3dadd(-1004.5, -22.8, 0, 3)
+}
+bt[22] {
+	pt3dadd(-750, -225, 0, 0.25)
+	pt3dadd(-753.5, -221.5, 0, 3)
+}
+bt[23] {
+	pt3dadd(-800, 50, 0, 0.25)
+	pt3dadd(-804.5, 52.2, 0, 3)
+}
+bt[24] {
+	pt3dadd(-750, 50, 0, 0.25)
+	pt3dadd(-753.5, 53.5, 0, 3)
+}
+bt[25] {
+	pt3dadd(-650, 25, 0, 0.25)
+	pt3dadd(-645.5, 27.2, 0, 3)
+}
+bt[26] {
+	pt3dadd(-450, 75, 0, 0.25)
+	pt3dadd(-445.2, 76.4, 0, 3)
+}
+bt[27] {
+	pt3dadd(-1000, -225, 0, 0.25)
+	pt3dadd(-1004.9, -226.0, 0, 3)
+}
+bt[28] {
+	pt3dadd(-925, -100, 0, 0.25)
+	pt3dadd(-929.5, -97.8, 0, 3)
+}
+bt[29] {
+	pt3dadd(-1000, -75, 0, 0.25)
+	pt3dadd(-1004.2, -72.2, 0, 3)
+}
+bt[30] {
+	pt3dadd(-250, -300, 0, 0.25)
+	pt3dadd(-254.5, -297.8, 0, 3)
+}
+bt[31] {
+	pt3dadd(-400, -250, 0, 0.25)
+	pt3dadd(-404.7, -248.2, 0, 3)
+}
+bt[32] {
+	pt3dadd(-575, -250, 0, 0.25)
+	pt3dadd(-577.2, -245.5, 0, 3)
+}
+bt[33] {
+	pt3dadd(-750, -275, 0, 0.25)
+	pt3dadd(-755.0, -274.4, 0, 3)
+}
+bt[34] {
+	pt3dadd(-450, -300, 0, 0.25)
+	pt3dadd(-451.0, -295.1, 0, 3)
+}
+bt[35] {
+	pt3dadd(-500, -325, 0, 0.25)
+	pt3dadd(-501.8, -320.3, 0, 3)
+}
+bt[36] {
+	pt3dadd(-1200, -300, 0, 0.25)
+	pt3dadd(-1205.0, -300.0, 0, 3)
+}
+bt[37] {
+	pt3dadd(-950, -200, 0, 0.25)
+	pt3dadd(-945.8, -197.2, 0, 3)
+}
+bt[38] {
+	pt3dadd(-1150, -25, 0, 0.25)
+	pt3dadd(-1154.5, -22.8, 0, 3)
+}
+bt[39] {
+	pt3dadd(-1000, 50, 0, 0.25)
+	pt3dadd(-998.1, 54.6, 0, 3)
+}
+bt[40] {
+	pt3dadd(-1300, -325, 0, 0.25)
+	pt3dadd(-1304.5, -322.8, 0, 3)
+}
+bt[41] {
+	pt3dadd(-475, -150, 0, 0.25)
+	pt3dadd(-470.0, -150.0, 0, 3)
+}
+bt[42] {
+	pt3dadd(-1200, 150, 0, 0.25)
+	pt3dadd(-1200.0, 155.0, 0, 3)
+}
+bt[43] {
+	pt3dadd(-1350, 50, 0, 0.25)
+	pt3dadd(-1353.5, 53.5, 0, 3)
+}
+bt[44] {
+	pt3dadd(-1300, 150, 0, 0.25)
+	pt3dadd(-1300.0, 155.0, 0, 3)
+}
+bt[45] {
+	pt3dadd(-1375, -100, 0, 0.25)
+	pt3dadd(-1375.3, -95.0, 0, 3)
+}
+bt[46] {
+	pt3dadd(-2150, -50, 0, 0.25)
+	pt3dadd(-2150.0, -45.0, 0, 3)
+}
+bt[47] {
+	pt3dadd(-2350, -50, 0, 0.25)
+	pt3dadd(-2354.9, -48.8, 0, 3)
+}
+bt[48] {
+	pt3dadd(-2450, -100, 0, 0.25)
+	pt3dadd(-2455.0, -100.0, 0, 3)
+}
+bt[49] {
+	pt3dadd(-2500, -225, 0, 0.25)
+	pt3dadd(-2505.0, -225.0, 0, 3)
+}
+bt[50] {
+	pt3dadd(-2550, -150, 0, 0.25)
+	pt3dadd(-2554.9, -149.2, 0, 3)
+}
+bt[51] {
+	pt3dadd(-2550, -100, 0, 0.25)
+	pt3dadd(-2554.5, -97.8, 0, 3)
+}
+
+
+XORIGIN = 0
+YORIGIN = 0
+ZORIGIN = 0
+
+access soma
+pt3dchange(0, x3d(0)+XORIGIN, y3d(0)+YORIGIN, z3d(0)+ZORIGIN, diam3d(0))
+pt3dchange(1, x3d(1)+XORIGIN, y3d(1)+YORIGIN, z3d(1)+ZORIGIN, diam3d(1))
+nseg=21
+
+for(i=0; i<=NAPICAL-1; i=i+1){
+	access ap[i]
+	pt3dchange(0, x3d(0)+XORIGIN, y3d(0)+YORIGIN, z3d(0)+ZORIGIN, diam3d(0))
+	pt3dchange(1, x3d(1)+XORIGIN, y3d(1)+YORIGIN, z3d(1)+ZORIGIN, diam3d(1))
+	nseg=101
+}
+
+for(i=0; i<=NBOUTON-1; i=i+1){
+	access bt[i]
+	pt3dchange(0, x3d(0)+XORIGIN, y3d(0)+YORIGIN, z3d(0)+ZORIGIN, diam3d(0))
+	pt3dchange(1, x3d(1)+XORIGIN, y3d(1)+YORIGIN, z3d(1)+ZORIGIN, diam3d(1))
+	nseg=5
+}
+
+forall Ra=70
+access ap[0]

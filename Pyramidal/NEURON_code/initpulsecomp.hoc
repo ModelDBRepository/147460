@@ -1,0 +1,24 @@
+/*
+CK Overstreet
+Last Updated 12/20/2012
+*/
+
+load_file("nrngui.hoc")
+
+load_file("anat_type9.hoc")
+		
+load_file("interpxyz.hoc")		
+
+load_file("setpointers.hoc")		
+
+load_file("rigc.ses")			
+
+load_file("field.hoc")			
+
+load_file("vrecc.ses")			
+
+load_file("calcrxc.hoc")		
+
+load_file("stimbipolar.hoc")		// Symmetric bipolar 
+stimulus
+load_file("pulsecompA.hoc")		// pulsecompA.hoc (1ms duration) or pulsecompB.hoc (0.2ms duration)

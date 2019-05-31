@@ -1,0 +1,255 @@
+/*
+CK Overstreet and JD Klein
+Last Updated 12/20/2012
+Major characteristics of cell bodies and axons reconstructed by hand from:
+H.D. Schwark, “The distribution of intrinsic cortical axons in area 3b of cat primary somatosensory cortex”, Experimental Brain Research, vol. 78, no. 3, pp. 501-513, Aug. 1989. 
+*/
+
+load_file("nrngui.hoc")
+
+NAPICAL=23
+NBOUTON=12
+
+create soma, ap[NAPICAL], bt[NBOUTON]
+
+access soma
+
+connect ap[0](0), soma(0)
+connect ap[1](0), ap[0](1)
+connect ap[2](0), ap[1](1)
+connect ap[3](0), ap[1](1)
+connect ap[4](0), ap[3](1)
+connect ap[5](0), ap[0](1)
+connect ap[6](0), ap[0](1)
+connect ap[7](0), ap[6](1)
+connect ap[8](0), ap[0](1)
+connect ap[9](0), ap[8](1)
+connect ap[10](0), ap[9](1)
+connect ap[11](0), ap[8](1)
+connect ap[12](0), ap[8](1)
+connect ap[13](0), ap[12](1)
+connect ap[14](0), ap[13](1)
+connect ap[15](0), ap[14](1)
+connect ap[16](0), ap[13](1)
+connect ap[17](0), ap[16](1)
+connect ap[18](0), ap[16](1)
+connect ap[19](0), ap[16](1)
+connect ap[20](0), ap[12](1)
+connect ap[21](0), ap[20](1)
+connect ap[22](0), ap[20](1)
+
+connect bt[0](0), ap[2](1)
+connect bt[1](0), ap[4](1)
+connect bt[2](0), ap[5](1)
+connect bt[3](0), ap[7](1)
+connect bt[4](0), ap[10](1)
+connect bt[5](0), ap[11](1)
+connect bt[6](0), ap[15](1)
+connect bt[7](0), ap[17](1)
+connect bt[8](0), ap[18](1)
+connect bt[9](0), ap[19](1)
+connect bt[10](0), ap[21](1)
+connect bt[11](0), ap[22](1)
+
+forall pt3dclear()
+
+soma {
+	pt3dadd(0, 0, 0, 10)
+	pt3dadd(0, 10, 0, 10)
+	insert axnode
+	insert extracellular
+	insert xtra
+	xraxial=1e+09 
+	xg=1e+09 
+	xc=0 
+	e_extracellular=0
+}
+
+for i = 0, NAPICAL-1 ap[i] { 
+	insert axnode
+	insert extracellular 
+	insert xtra
+	xraxial=1e+09 
+	xg=1e+09 
+	xc=0 
+	e_extracellular=0
+} 
+
+for i = 0, NBOUTON-1 bt[i] { 
+	insert axnode 
+	insert extracellular 
+	insert xtra
+	xraxial=1e+09 
+	xg=1e+09 
+	xc=0 
+	e_extracellular=0
+}
+
+ap[0] {
+	pt3dadd(0, 10, 0, 1)
+	pt3dadd(50, -25, 0, 1)
+}
+ap[1] {
+	pt3dadd(50, -25, 0, 1)
+	pt3dadd(125, 400, 0, 1)
+}
+ap[2] {
+	pt3dadd(125, 400, 0, .5)
+	pt3dadd(350, 400, 0, .25)
+}
+ap[3] {
+	pt3dadd(125, 400, 0, .5)
+	pt3dadd(150, 500, 0, .5)
+}
+ap[4] {
+	pt3dadd(150, 500, 0, .25)
+	pt3dadd(50, 525, 0, .25)
+}
+ap[5] {
+	pt3dadd(50, -25, 0, .5)
+	pt3dadd(225, -25, 0, .25)
+}
+ap[6] {
+	pt3dadd(50, -25, 0, .5)
+	pt3dadd(-250, -25, 0, .5)
+}
+ap[7] {
+	pt3dadd(-250, -25, 0, .5)
+	pt3dadd(-500, 400, 0, .25)
+}
+ap[8] {
+	pt3dadd(50, -25, 0, 1)
+	pt3dadd(50, -75, 0, 1)
+}
+ap[9] {
+	pt3dadd(50, -75, 0, .5)
+	pt3dadd(-300, -75, 0, .5)
+}
+ap[10] {
+	pt3dadd(-300, -75, 0, .5)
+	pt3dadd(-450, 375, 0, .25)
+}
+ap[11] {
+	pt3dadd(50, -75, 0, .5)
+	pt3dadd(50, -150, 0, .5)
+}
+ap[12] {
+	pt3dadd(50, -75, 0, 1)
+	pt3dadd(175, -75, 0, 1)
+}
+ap[13] {
+	pt3dadd(175, -75, 0, .5)
+	pt3dadd(650, 500, 0, .5)
+}
+ap[14] {
+	pt3dadd(650, 500, 0, .5)
+	pt3dadd(725, 575, 0, .5)
+}
+ap[15] {
+	pt3dadd(725, 575, 0, .25)
+	pt3dadd(775, 700, 0, .25)
+}
+ap[16] {
+	pt3dadd(650, 500, 0, .5)
+	pt3dadd(675, 600, 0, .5)
+}
+ap[17] {
+	pt3dadd(675, 600, 0, .25)
+	pt3dadd(525, 750, 0, .25)
+}
+ap[18] {
+	pt3dadd(675, 600, 0, .25)
+	pt3dadd(675, 725, 0, .25)
+}
+ap[19] {
+	pt3dadd(675, 600, 0, .25)
+	pt3dadd(750, 750, 0, .25)
+}
+ap[20] {
+	pt3dadd(175, -75, 0, .5)
+	pt3dadd(750, -300, 0, .5)
+}
+ap[21] {
+	pt3dadd(750, -300, 0, .5)
+	pt3dadd(1000, 0, 0, .25)
+}
+ap[22] {
+	pt3dadd(750, -300, 0, .5)
+	pt3dadd(1200, -350, 0, .25)
+}
+
+bt[0] {
+	pt3dadd(350, 400, 0, 0.25)
+	pt3dadd(355.0, 400.0, 0, 3)
+}
+bt[1] {
+	pt3dadd(50, 525, 0, 0.25)
+	pt3dadd(45.1, 526.2, 0, 3)
+}
+bt[2] {
+	pt3dadd(225, -25, 0, 0.25)
+	pt3dadd(230.0, -25.0, 0, 3)
+}
+bt[3] {
+	pt3dadd(-500, 400, 0, 0.25)
+	pt3dadd(-502.5, 404.3, 0, 3)
+}
+bt[4] {
+	pt3dadd(-450, 375, 0, 0.25)
+	pt3dadd(-451.6, 379.7, 0, 3)
+}
+bt[5] {
+	pt3dadd(50, -150, 0, 0.25)
+	pt3dadd(50.0, -155.0, 0, 3)
+}
+bt[6] {
+	pt3dadd(775, 700, 0, 0.25)
+	pt3dadd(776.9, 704.6, 0, 3)
+}
+bt[7] {
+	pt3dadd(525, 750, 0, 0.25)
+	pt3dadd(521.5, 753.5, 0, 3)
+}
+bt[8] {
+	pt3dadd(675, 725, 0, 0.25)
+	pt3dadd(675.0, 730.0, 0, 3)
+}
+bt[9] {
+	pt3dadd(750, 750, 0, 0.25)
+	pt3dadd(752.2, 754.5, 0, 3)
+}
+bt[10] {
+	pt3dadd(1000, 0, 0, 0.25)
+	pt3dadd(1003.2, 3.8, 0, 3)
+}
+bt[11] {
+	pt3dadd(1200, -350, 0, 0.25)
+	pt3dadd(1205.0, -350.6, 0, 3)
+}
+
+
+XORIGIN = 0
+YORIGIN = 0
+ZORIGIN = 0
+
+access soma
+pt3dchange(0, x3d(0)+XORIGIN, y3d(0)+YORIGIN, z3d(0)+ZORIGIN, diam3d(0))
+pt3dchange(1, x3d(1)+XORIGIN, y3d(1)+YORIGIN, z3d(1)+ZORIGIN, diam3d(1))
+nseg=21
+
+for(i=0; i<=NAPICAL-1; i=i+1){
+	access ap[i]
+	pt3dchange(0, x3d(0)+XORIGIN, y3d(0)+YORIGIN, z3d(0)+ZORIGIN, diam3d(0))
+	pt3dchange(1, x3d(1)+XORIGIN, y3d(1)+YORIGIN, z3d(1)+ZORIGIN, diam3d(1))
+	nseg=101
+}
+
+for(i=0; i<=NBOUTON-1; i=i+1){
+	access bt[i]
+	pt3dchange(0, x3d(0)+XORIGIN, y3d(0)+YORIGIN, z3d(0)+ZORIGIN, diam3d(0))
+	pt3dchange(1, x3d(1)+XORIGIN, y3d(1)+YORIGIN, z3d(1)+ZORIGIN, diam3d(1))
+	nseg=5
+}
+
+forall Ra=70
+access ap[0]

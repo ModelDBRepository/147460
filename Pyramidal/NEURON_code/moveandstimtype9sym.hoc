@@ -1,0 +1,44 @@
+objref f1	
+f1 = new File()	
+
+objref data, stimdata, m, apc, data2
+data=new Vector()
+data2=new Vector(3)
+
+m = new Matrix(1500, 3)
+
+apc = new APCount(0.5)
+apc.thresh=0
+
+printf("---Starting Simulation Anat Type 9Sym---")
+
+j=0
+for (x2=-253.003; x2<=553.003; x2=x2+25){		//Move electrode in horizontal axis
+	for (y=-1703.003; y<=203.003; y=y+25){		//Move electrode in vertical axis
+		for (i=-0.005; i>=-.125; i=i-0.01){	//Increase stimulation amplitude
+			
+			data.record(&soma.v(0.5))	//Record voltage in soma during simulation
+
+			setelec(x2, y, 0)		//Move electrode to coordinates (x2, y, 0)
+			setstim(1, 1, i)		//Set stimulation amplitude
+			tstop=30
+
+			init()
+			run()				//Initialize and run simulation
+			
+			if(apc.n >= 1){			//If an action potential is recorded in the soma
+				print "X:",x2, "\tY:",y, "\tI:",i, "\tAP:",apc.n
+				data2.x[0]=x2
+				data2.x[1]=y
+				data2.x[2]=i
+				m.setrow(j, data2) 	//Record the location and stimulation amplitude
+				j=j+1
+				break			//Skip remaining stimulation amplitudes at that location
+			}
+		}
+	}
+f1.wopen("filemat9sym.dat")			//Print data to file
+m.fprint(f1)
+f1.close()	
+}
+
