@@ -2,7 +2,7 @@
 CK Overstreet and JD Klein
 Last Updated 12/20/2012
 Major characteristics of cell bodies and axons reconstructed by hand from:
-H.D. Schwark, ìThe distribution of intrinsic cortical axons in area 3b of cat primary somatosensory cortexî, Experimental Brain Research, vol. 78, no. 3, pp. 501-513, Aug. 1989. 
+H.D. Schwark, ‚ÄúThe distribution of intrinsic cortical axons in area 3b of cat primary somatosensory cortex‚Äù, Experimental Brain Research, vol. 78, no. 3, pp. 501-513, Aug. 1989. 
 */
 
 load_file("nrngui.hoc")
